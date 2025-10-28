@@ -3,20 +3,20 @@ import { useState } from "react";
 
 function YourBotArmy({ bots, setArmy, army }) {
   // State for whether bots in the army can be removed
-  const [canBeRemoved, setCanBeRemoved] = useState(true);
+  const [canBeRemoved] = useState(true);
 
   return (
     <div>
       <h1>Your Bot Army</h1>
-      {/* Map over army*/}
+      {/* Map over army */}
       {army.map((item, index) => (
         <SingleBot
-          data={item} 
+          data={item}
           key={item.id}
-          setArmy={setArmy} 
-          canBeRemoved={canBeRemoved} 
-          index={index} 
-          army={army} 
+          setArmy={setArmy}
+          canBeRemoved={canBeRemoved}
+          index={index}
+          army={army}
         />
       ))}
     </div>
